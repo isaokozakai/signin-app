@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-signin-client_id"
+    content="447186553095-jk6qpsjmf65ngbl4qos59mue4litk5vu.apps.googleusercontent.com">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <title>Google Sign in</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .data {
+      display: none;
+      text-align: center;
+    }
+
+    #profile-content {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    #pic {
+      margin-bottom: 20px;
+    }
+
+    #email {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <div class="data">
+    <p class="title">Profile</p>
+    <div id="profile-content">
+      <img id="pic" class="img-circle">
+      <p class="title">Email Address</p>
+      <p id="email" class="alert alert-danger"></p>
+    </div>
+    <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+  </div>
+</body>
+
+</html>
